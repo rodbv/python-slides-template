@@ -77,9 +77,7 @@ flowchart TD
 
 No projetor, a luz da sala apaga o preto da projeção, e o fundo claro se lê melhor. Numa tela de LED do tamanho de uma parede, o fundo escuro não ofusca o público. O brilho confortável de uma tela acompanha a luz do ambiente, e uma tela muito clara numa sala com pouca luz cansa a vista ([Zhou e outros, 2021](https://doi.org/10.3390/app11094108)). Numa tela menor, como uma TV ou um monitor grande, o brilho não chega a ofuscar, e a versão clara se lê melhor.
 
-## Cores e fontes
-
-### Python Floripa
+## Cores e fontes da Python Floripa
 
 | | Cor | Hex | Uso |
 |---|---|---|---|
@@ -92,21 +90,6 @@ No projetor, a luz da sala apaga o preto da projeção, e o fundo claro se lê m
 | Fonte | Uso |
 |---|---|
 | [Poppins](https://fonts.google.com/specimen/Poppins) | Títulos e texto |
-| [JetBrains Mono](https://fonts.google.com/specimen/JetBrains+Mono) | Código |
-
-### Python Brasil
-
-| | Cor | Hex | Uso |
-|---|---|---|---|
-| ![Amostra de preto](docs/cores/0F0F0F.png) | Preto | `#0F0F0F` | Texto na versão clara, fundo na escura |
-| ![Amostra de off-white](docs/cores/E8F4BA.png) | Off-white | `#E8F4BA` | Texto na versão escura |
-| ![Amostra de verde limão](docs/cores/B7FF06.png) | Verde limão | `#B7FF06` | Destaque; como cor de texto, só no fundo escuro |
-| ![Amostra de violeta](docs/cores/BF2EB2.png) | Violeta | `#BF2EB2` | Links na versão clara |
-
-| Fonte | Uso |
-|---|---|
-| [Cascadia Mono](https://fonts.google.com/specimen/Cascadia+Mono) | Títulos |
-| [Roboto](https://fonts.google.com/specimen/Roboto) | Texto |
 | [JetBrains Mono](https://fonts.google.com/specimen/JetBrains+Mono) | Código |
 
 ## Uma marca nova

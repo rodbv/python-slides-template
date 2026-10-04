@@ -14,7 +14,7 @@ Python Floripa clara e escura e Python Brasil clara e escura, e monta:
     docs/python-brasil.png     três slides com a marca Python Brasil
     docs/python-brasil-escura.png  os mesmos três, na versão escura
     docs/codigo.png            o slide de código, na versão escura
-    docs/cores/<HEX>.png       uma amostra para cada cor de brands/*/brand.css
+    docs/cores/<HEX>.png       uma amostra para cada cor da tabela de cores do README
 
 Se o Slidev não achar o Chromium, rode `npx playwright install chromium` ou
 aponte CHROMIUM_PATH para um Chrome ou Chromium instalado.
@@ -85,9 +85,8 @@ def grade(imagens: list[Path], colunas: int, saida: Path) -> None:
 def amostras_de_cor() -> None:
     pasta = DOCS / "cores"
     pasta.mkdir(parents=True, exist_ok=True)
-    cores = set()
-    for css in RAIZ.glob("brands/*/brand.css"):
-        cores |= {c.upper() for c in re.findall(r"#([0-9a-fA-F]{6})\b", css.read_text(encoding="utf-8"))}
+    readme = (RAIZ / "README.md").read_text(encoding="utf-8")
+    cores = {c.upper() for c in re.findall(r"docs/cores/([0-9a-fA-F]{6})\.png", readme)}
     for cor in sorted(cores):
         amostra = ImageOps.expand(Image.new("RGB", (40, 40), f"#{cor}"), border=1, fill="#888888")
         amostra.save(pasta / f"{cor}.png")

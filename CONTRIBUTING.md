@@ -29,7 +29,7 @@ O script exporta os slides nas versões clara e escura das duas marcas, e regrav
 | `docs/python-brasil.png` | Capa, código e fluxograma com a marca Python Brasil |
 | `docs/python-brasil-escura.png` | Os mesmos três, na versão escura |
 | `docs/codigo.png` | O slide de código na versão escura |
-| `docs/cores/*.png` | Uma amostra de cada cor dos arquivos `brands/*/brand.css` |
+| `docs/cores/*.png` | Uma amostra de cada cor da tabela de cores do README |
 
 Os números dos slides de cada imagem ficam no topo de `scripts/previews.py`. Se você acrescentar ou tirar um slide, confira esses números. Se o Slidev não achar o Chromium, aponte `CHROMIUM_PATH` para um Chrome ou Chromium instalado:
 
