@@ -1,18 +1,22 @@
 # Instruções para agentes
 
-Este repositório é um modelo de slides para palestras de Python, com o [Slidev](https://sli.dev). A pessoa palestrante escreve a palestra em `slides.md`. A marca e a versão vêm do topo desse arquivo, e os estilos ficam em `styles/` e `brands/`.
+Este repositório é um modelo de slides para palestras de Python, com o [Slidev](https://sli.dev). A pessoa palestrante escreve a palestra em `slides.md`. A marca vem do topo desse arquivo, e os estilos ficam em `styles/` e `brands/`. A sintaxe do Slidev está em [sli.dev/guide/syntax](https://sli.dev/guide/syntax).
 
 ## Arquivos
 
-- `slides.md`: a apresentação. Os slides de exemplo mostram cada layout, com dicas nas anotações.
+- `slides.md`: a apresentação. Os slides de exemplo mostram cada layout, com dicas nas anotações. O headmatter, no topo, tem:
+  - `brand:`: a pasta da marca em `brands/`.
+  - `colorSchema: auto`: o botão de lua e a tecla D trocam entre a versão clara e a escura durante a palestra. Com `light` ou `dark`, o Slidev mostra só essa versão e esconde o botão. Deixe `auto`, a não ser que a pessoa peça outra coisa.
+  - `fonts:`: as fontes que o Slidev carrega do Google Fonts. Uma marca com fonte nova precisa da fonte aqui.
 - `brands/<marca>/brand.css`: as cores, as fontes, o logo e o texto do rodapé de cada marca, como variáveis CSS. `brand:` no topo do `slides.md` escolhe a pasta.
 - `styles/index.css`: o estilo comum a todas as marcas, escrito só com as variáveis da marca. Não mude esse arquivo para resolver um slide: use os layouts abaixo. Mude o arquivo só quando a pessoa pedir.
 - `setup/shiki.ts`: as cores do código (GitHub Light nas duas versões).
 - `setup/mermaid.ts`: as cores e os tamanhos dos diagramas. O Slidev desenha cada diagrama num shadow DOM, então o `styles/index.css` não chega neles; as cores dos diagramas mudam aqui.
 - `global-top.vue`: lê `brand:` e marca o `<html>` com `data-brand`, para o CSS da marca valer.
-- `slide-bottom.vue`: o rodapé com o nome da marca e o número do slide.
+- `slide-bottom.vue`: o rodapé com o logo ou o nome da marca, e o número do slide. Os layouts `cover`, `section`, `statement`, `end`, `image` e `full` ficam sem rodapé. Para tirar o rodapé de outro slide, use `semRodape: true` no front matter do slide.
 - `public/`: imagens servidas na raiz, como `/qr.png`. As imagens em `public/exemplo/` são caixas cinza que marcam o lugar de uma imagem: troque pela imagem da pessoa, nunca use uma delas na palestra.
 - `scripts/qr.py`: gera `public/qr.png` (`uv run scripts/qr.py https://endereco`).
+- `scripts/previews.py`: gera as imagens do README em `docs/`. Rode depois de mudar `styles/`, `setup/`, `brands/` ou os slides que aparecem nas imagens. O [`CONTRIBUTING.md`](CONTRIBUTING.md) explica.
 
 ## Como um slide é escrito
 
@@ -61,6 +65,7 @@ Outros recursos:
 - Barras, ícones e bordas precisam de contraste de 3:1 com o fundo. Cor de destaque clara sobre fundo claro precisa de borda escura.
 - Código em cartão claro nas duas versões. Para código em fundo escuro, a pessoa troca `github-light` por `monokai` em `setup/shiki.ts`; nesse caso, use fonte grande.
 - Tela de LED do tamanho de uma parede: versão escura. Projetor, TV ou monitor: versão clara.
+- Para criar uma marca, siga "Uma marca nova" no [`README.md`](README.md#uma-marca-nova). Variáveis que uma marca define: `--bg`, `--text`, `--muted`, `--accent`, `--fill`, `--on-fill`, `--fill-edge`, `--card`, `--card-line`, `--link`, `--font-sans`, `--font-head`, `--head-weight`, `--head-transform`, `--logo` e `--footer`. `--footer-logo` e `--footer-logo-width` são opcionais. A versão escura redefine as cores em `html.dark[data-brand='...']`.
 
 ## Regras de conteúdo
 
