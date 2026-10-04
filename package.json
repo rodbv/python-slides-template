@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "slidev --open",
     "build": "slidev build",
-    "export": "slidev export"
+    "export": "slidev export",
+    "export:escura": "slidev export --dark --output slides-escura.pdf"
   },
   "license": "CC0-1.0",
   "dependencies": {

@@ -1,6 +1,6 @@
 ---
 brand: python-floripa
-colorSchema: light
+colorSchema: auto
 theme: none
 title: Título da sua palestra
 author: Seu nome aqui
@@ -23,7 +23,8 @@ Subtítulo ou frase de efeito
 <!--
 - Que bom que você vai palestrar! O seu jeito de falar vale mais do que qualquer dica deste modelo.
 - Este arquivo é um modelo: cada slide de exemplo mostra um layout e traz dicas nestas anotações. Use as que servirem para você.
-- No topo deste arquivo, brand escolhe a marca (python-floripa ou python-brasil) e colorSchema escolhe a versão: light (clara) ou dark (escura).
+- No topo deste arquivo, brand escolhe a marca: python-floripa ou python-brasil.
+- O botão de lua na barra inferior, ou a tecla D, troca entre a versão clara e a escura.
 - Ao reaproveitar um slide, apague estas anotações e escreva as suas.
 -->
 
@@ -289,7 +290,7 @@ flowchart LR
 
 <!--
 - Este é um fluxograma em Mermaid: escreva o diagrama como texto, num bloco ```mermaid, e o Slidev desenha. O losango marca uma decisão.
-- Para trocar de versão, mude colorSchema no topo deste arquivo: light (clara) ou dark (escura). O código fica em fundo claro nas duas.
+- Para trocar de versão, use o botão de lua na barra inferior ou a tecla D. Dá para escolher no dia, depois de ver a tela da sala. O código fica em fundo claro nas duas.
 - No projetor, a luz da sala apaga o preto da projeção. Numa tela do tamanho de uma parede, o fundo escuro não ofusca o público.
 -->
 

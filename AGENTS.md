@@ -81,4 +81,4 @@ Exporte os slides em PNG e olhe os que mudaram:
 npx slidev export --format png --output conferir
 ```
 
-Para olhar só alguns slides, use `--range 3,7-9`. Para a outra versão, troque `colorSchema` no topo do `slides.md` antes de exportar, e volte ao valor original depois. Apague a pasta `conferir` depois.
+Para olhar só alguns slides, use `--range 3,7-9`. Para a versão escura, acrescente `--dark`. Com `colorSchema: light` ou `dark` no topo do `slides.md`, o `--dark` não muda nada: o Slidev usa a versão do topo. Apague a pasta `conferir` depois.

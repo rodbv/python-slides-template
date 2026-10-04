@@ -12,7 +12,7 @@ Os mesmos slides, na versão escura e com a marca Python Brasil:
 
 ![Capa, slide de código e fluxograma com a marca Python Brasil, em preto e verde limão](docs/python-brasil.png)
 
-Veja os slides de exemplo [no navegador](https://rodbv.github.io/python-slides-template/) ou [em PDF](https://rodbv.github.io/python-slides-template/slides.pdf).
+Veja os slides de exemplo [no navegador](https://rodbv.github.io/python-slides-template/), ou em PDF nas versões [clara](https://rodbv.github.io/python-slides-template/slides.pdf) e [escura](https://rodbv.github.io/python-slides-template/slides-escura.pdf).
 
 ## Começar
 
@@ -20,7 +20,7 @@ Você vai precisar do [Node.js](https://nodejs.org) 22.12 ou mais novo.
 
 1. Clique em **Use this template > Create a new repository**. Deixe o repositório público: o GitHub Pages é grátis para repositórios públicos.
 2. No repositório novo, abra **Settings > Pages** e escolha **GitHub Actions** em **Source**.
-3. Na aba **Actions**, abra a execução "pages", que falhou porque o Pages ainda estava desligado, e clique em **Re-run all jobs**. A partir daí, cada push na `main` publica os slides e o PDF.
+3. Na aba **Actions**, abra a execução "pages", que falhou porque o Pages ainda estava desligado, e clique em **Re-run all jobs**. A partir daí, cada push na `main` publica os slides e os PDFs.
 4. Na página do repositório, clique na engrenagem de **About** e marque **Use your GitHub Pages website**. O link dos seus slides fica no topo do repositório.
 5. Clone o repositório e rode, na pasta dele:
 
@@ -31,7 +31,7 @@ npm run dev
 
 O navegador abre os slides em `http://localhost:3030`. Edite o `slides.md` e salve: o slide muda na hora.
 
-Na sua cópia, os links deste README apontam para o seu site. Os slides ficam em `https://SEU-USUARIO.github.io/NOME-DO-REPOSITORIO/` e o PDF em `.../slides.pdf`. Sem o Pages, o PDF também fica para baixar em cada execução da aba Actions, no artefato **slides-pdf**.
+Na sua cópia, os links deste README apontam para o seu site. Os slides ficam em `https://SEU-USUARIO.github.io/NOME-DO-REPOSITORIO/`, e os PDFs em `.../slides.pdf` (versão clara) e `.../slides-escura.pdf`. Sem o Pages, os PDFs também ficam para baixar em cada execução da aba Actions, no artefato **slides-pdf**.
 
 Esse endereço serve para o QR code do encerramento: o público abre os seus slides no celular.
 
@@ -42,11 +42,13 @@ As duas primeiras linhas do `slides.md` escolhem a marca e a versão:
 ```yaml
 ---
 brand: python-floripa   # ou python-brasil
-colorSchema: light      # light (clara) ou dark (escura)
+colorSchema: auto       # auto, light (só a clara) ou dark (só a escura)
 ---
 ```
 
-No modo de edição, a tecla **D** troca entre a versão clara e a escura, para você comparar.
+Com `auto`, o botão de lua na barra inferior e a tecla **D** trocam entre a versão clara e a escura. O navegador guarda a escolha, e o modo apresentador acompanha a janela dos slides. Assim você escolhe a versão no dia, depois de ver a tela da sala: veja [Tema claro ou escuro?](#tema-claro-ou-escuro).
+
+Com `light` ou `dark`, o Slidev mostra só essa versão e esconde o botão de lua.
 
 ## Tema claro ou escuro?
 
@@ -145,11 +147,12 @@ Leve também o PDF num pendrive: ele abre em qualquer computador, sem internet.
 |---|---|
 | `npm run dev` | Abre os slides no navegador e atualiza a cada mudança |
 | `npm run build` | Gera o site em `dist/` |
-| `npm run export` | Gera o PDF em `slides-export.pdf` |
+| `npm run export` | Gera o PDF da versão clara em `slides-export.pdf` |
+| `npm run export:escura` | Gera o PDF da versão escura em `slides-escura.pdf` |
 | `npx slidev export --format pptx` | Gera um PowerPoint, com cada slide como imagem |
 | `uv run scripts/qr.py https://seu-link` | Troca o QR code em `public/qr.png` |
 
-O PDF sai na versão de `colorSchema`, no topo do `slides.md`. Para o PDF da outra versão, troque `colorSchema` e exporte de novo.
+Com `colorSchema: light` ou `dark`, os dois comandos geram a versão escolhida.
 
 Para exportar, o Slidev usa o Chromium. Se o comando pedir, rode `npx playwright install chromium` uma vez.
 

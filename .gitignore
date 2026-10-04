@@ -4,3 +4,4 @@ dist/
 *.local
 slides-export.*
 .preview-*.md
+slides-escura.pdf
