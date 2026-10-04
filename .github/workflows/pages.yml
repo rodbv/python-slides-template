@@ -1,0 +1,64 @@
+# Publishes the slides on GitHub Pages at every push to main, with the PDF at slides.pdf.
+name: pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - run: npm ci
+
+      - id: pages
+        uses: actions/configure-pages@v5
+
+      - name: Build the site
+        run: npm run build -- --base "${{ steps.pages.outputs.base_path }}/"
+
+      - name: Export the PDF
+        run: |
+          npx playwright install --with-deps chromium
+          npm run export -- --output dist/slides.pdf
+
+      # Slidev routes every slide through index.html; GitHub Pages serves 404.html for /2, /3 and so on.
+      - run: cp dist/index.html dist/404.html
+
+      # The PDF also goes up on its own, so it can be downloaded from the run page
+      # even when GitHub Pages is off.
+      - uses: actions/upload-artifact@v4
+        with:
+          name: slides-pdf
+          path: dist/slides.pdf
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-24.04
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
