@@ -41,7 +41,8 @@ As anotações são um comentário HTML no fim do slide, com dois ou três tópi
 | `statement` | `# Frase` em até duas linhas, e uma linha de apoio |
 | `quote` | `# Citação` sem aspas (o tema põe as aspas), autoria na linha seguinte |
 | `section` | `<div class="numero">01</div>` e `# Título da seção` |
-| `two-cols` | Coluna da esquerda, `::right::`, coluna da direita. Para alinhar os títulos das colunas, use `<div class="h-[3.3em]" />` no topo da direita |
+| `two-cols-header` | `# Título` nas duas colunas, `::left::`, `### Coluna` + conteúdo, `::right::`, `### Coluna` + conteúdo. Para comparar: antes e depois, dois trechos de código |
+| `two-cols` | Coluna da esquerda, `::right::`, coluna da direita, sem título comum. Para foto ou imagem ao lado do texto |
 | `two-cols` com `layoutClass: destaque` | `# Mensagem` na esquerda (vai no painel da cor de destaque) e até quatro tópicos na direita |
 
 Outros recursos:
@@ -65,7 +66,7 @@ Outros recursos:
 
 - O conteúdo é da pessoa palestrante. Organize o que ela escreveu em slides, encurte e escolha os layouts, mas não invente fatos, exemplos, números nem opiniões. Se faltar alguma coisa, pergunte.
 - Uma ideia por slide. De 3 a 5 tópicos curtos, de uma linha cada quando possível.
-- Código: até 8 linhas e 60 colunas por slide (26 colunas em `two-cols`). Marque a linguagem do bloco, como ` ```python `.
+- Código: até 8 linhas e 60 colunas por slide (26 colunas em duas colunas). Marque a linguagem do bloco, como ` ```python `.
 - Toda imagem tem texto alternativo no `alt`. Gráficos levam os números no texto alternativo ou nas anotações.
 - O que não cabe no slide vai para as anotações.
 - Escreva no idioma de `lang:`, no topo do arquivo. Use linguagem neutra de gênero quando possível ("pessoa palestrante", "o público", "quem assiste").

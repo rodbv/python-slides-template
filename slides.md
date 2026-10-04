@@ -120,10 +120,12 @@ layout: section
 -->
 
 ---
-layout: two-cols
+layout: two-cols-header
 ---
 
 # Texto no slide
+
+::left::
 
 ### Em vez de
 
@@ -134,8 +136,6 @@ layout: two-cols
 
 ::right::
 
-<div class="h-[3.3em]" />
-
 ### Experimente
 
 - Uma ideia por slide
@@ -144,7 +144,7 @@ layout: two-cols
 - A “colinha” nas anotações do slide
 
 <!--
-- Cada coluna tem o seu título: antes e depois, problema e solução.
+- O layout two-cols-header põe o título nas duas colunas, e cada coluna tem o seu subtítulo: antes e depois, problema e solução.
 - O detalhe e a “colinha” vão para as anotações, que só você vê.
 -->
 
@@ -192,10 +192,12 @@ class Palestra:
 -->
 
 ---
-layout: two-cols
+layout: two-cols-header
 ---
 
 # Um exemplo menor também ensina
+
+::left::
 
 ### Muito pequeno para ler 😟
 
@@ -223,8 +225,6 @@ class Palestra:
 </div>
 
 ::right::
-
-<div class="h-[3.3em]" />
 
 ### Dá para ler do fundo 😊
 

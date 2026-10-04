@@ -179,7 +179,8 @@
 
 /* ---------- duas colunas e imagem ---------- */
 
-.slidev-layout.two-columns { column-gap: 2.2rem; }
+.slidev-layout.two-columns,
+.slidev-layout.two-cols-header { column-gap: 2.2rem; }
 
 .slidev-layout.image-left,
 .slidev-layout.image-right { background: var(--bg); }
