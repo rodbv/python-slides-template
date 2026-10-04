@@ -24,9 +24,9 @@ O script exporta os slides nas versões clara e escura das duas marcas, e regrav
 
 | Arquivo | Conteúdo |
 |---|---|
-| `docs/overview.png` | Seis slides da versão clara |
-| `docs/overview-escura.png` | Os mesmos seis, na versão escura |
-| `docs/python-brasil.png` | Capa, código e fluxograma com a marca Python Brasil |
+| `docs/overview.png` | Nove slides da versão clara, com dicas e com exemplos técnicos |
+| `docs/overview-escura.png` | Os mesmos nove, na versão escura |
+| `docs/python-brasil.png` | Três slides com a marca Python Brasil |
 | `docs/python-brasil-escura.png` | Os mesmos três, na versão escura |
 | `docs/codigo.png` | O slide de código na versão escura |
 | `docs/cores/*.png` | Uma amostra de cada cor da tabela de cores do README |

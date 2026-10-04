@@ -1,20 +1,22 @@
 # Modelo de slides para palestras de Python
 
-Escreva a sua palestra em Markdown e apresente no navegador, com a marca da sua comunidade. Cada slide de exemplo mostra um layout e traz dicas nas anotações, que você vê no modo apresentador. O modelo usa o [Slidev](https://sli.dev): o código sai colorido sozinho, e fluxogramas e gráficos são escritos como texto, com o [Mermaid](https://mermaid.js.org).
+Em vez de Lorem Ipsum, os slides de exemplo trazem dicas práticas para quem vai apresentar pela primeira ou pela milésima vez: como começar com calma, quanto texto cabe num slide, como deixar o código legível do fundo da sala e o que testar antes de subir no palco. Cada slide mostra um layout, e as anotações trazem mais dicas, que você vê no modo apresentador. Troque as dicas pelo seu conteúdo e aproveite o layout.
+
+Os slides são um arquivo Markdown, apresentado no navegador com o [Slidev](https://sli.dev). O código sai colorido sozinho, e fluxogramas e gráficos são escritos como texto, com o [Mermaid](https://mermaid.js.org).
 
 O modelo já vem com duas marcas, Python Floripa e Python Brasil, cada uma com versão clara e escura. Uma linha no topo do `slides.md` escolhe a marca. Durante a palestra, o botão de lua troca a versão.
 
 ### Python Floripa, versão clara
 
-![Seis slides de exemplo com a marca Python Floripa, na versão clara, em branco, azul-marinho e laranja: capa, seção, código, fluxograma, gráfico de barras e encerramento com QR code](docs/overview.png)
+![Nove slides de exemplo com a marca Python Floripa, na versão clara, em branco, azul-marinho e laranja: capa, "A sala está torcendo por você.", "Legibilidade conta.", dicas para começar, código, três números, o seu dia de palestra, o fluxograma da versão e "Sua palestra é para todo mundo"](docs/overview.png)
 
 ### Python Floripa, versão escura
 
-![Os mesmos seis slides na versão escura, com fundo azul-marinho e títulos em laranja. O código continua num cartão branco](docs/overview-escura.png)
+![Os mesmos nove slides na versão escura, com fundo azul-marinho e títulos em laranja. O código continua num cartão branco](docs/overview-escura.png)
 
 ### Python Brasil, versão clara
 
-![Capa, slide de código e fluxograma com a marca Python Brasil, na versão clara, em branco, preto e verde limão](docs/python-brasil.png)
+!["A sala está torcendo por você.", dicas para começar e código, com a marca Python Brasil na versão clara, em branco, preto e verde limão](docs/python-brasil.png)
 
 ### Python Brasil, versão escura
 

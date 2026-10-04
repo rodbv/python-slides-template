@@ -9,8 +9,8 @@
 Exporta os slides em PNG com o Slidev (npx slidev export), nas variantes
 Python Floripa clara e escura e Python Brasil clara e escura, e monta:
 
-    docs/overview.png          seis slides da versão clara
-    docs/overview-escura.png   os mesmos seis, na versão escura
+    docs/overview.png          nove slides da versão clara
+    docs/overview-escura.png   os mesmos nove, na versão escura
     docs/python-brasil.png     três slides com a marca Python Brasil
     docs/python-brasil-escura.png  os mesmos três, na versão escura
     docs/codigo.png            o slide de código, na versão escura
@@ -32,8 +32,8 @@ from PIL import Image, ImageOps
 RAIZ = Path(__file__).resolve().parent.parent
 DOCS = RAIZ / "docs"
 
-SLIDES_DA_VISAO_GERAL = [1, 7, 10, 14, 15, 18]
-SLIDES_DA_PYTHON_BRASIL = [1, 10, 14]
+SLIDES_DA_VISAO_GERAL = [1, 2, 4, 5, 10, 12, 13, 14, 16]
+SLIDES_DA_PYTHON_BRASIL = [2, 5, 10]
 SLIDE_DE_CODIGO = 10
 
 LARGURA_DA_MINIATURA = 640
