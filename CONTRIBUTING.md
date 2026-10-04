@@ -20,13 +20,14 @@ As imagens em `docs/` saem dos próprios slides. Depois de mudar `slides.md`, `s
 uv run scripts/previews.py
 ```
 
-O script exporta os slides nas versões Python Floripa clara, Python Floripa escura e Python Brasil clara, e regrava:
+O script exporta os slides nas versões clara e escura das duas marcas, e regrava:
 
 | Arquivo | Conteúdo |
 |---|---|
 | `docs/overview.png` | Seis slides da versão clara |
 | `docs/overview-escura.png` | Os mesmos seis, na versão escura |
 | `docs/python-brasil.png` | Capa, código e fluxograma com a marca Python Brasil |
+| `docs/python-brasil-escura.png` | Os mesmos três, na versão escura |
 | `docs/codigo.png` | O slide de código na versão escura |
 | `docs/cores/*.png` | Uma amostra de cada cor dos arquivos `brands/*/brand.css` |
 

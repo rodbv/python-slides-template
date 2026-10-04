@@ -2,15 +2,23 @@
 
 Escreva a sua palestra em Markdown e apresente no navegador, com a marca da sua comunidade. Cada slide de exemplo mostra um layout e traz dicas nas anotações, que você vê no modo apresentador. O modelo usa o [Slidev](https://sli.dev): o código sai colorido sozinho, e fluxogramas e gráficos são escritos como texto, com o [Mermaid](https://mermaid.js.org).
 
-O modelo já vem com duas marcas, Python Floripa e Python Brasil, cada uma com versão clara e escura. Uma linha no topo do `slides.md` escolhe a marca, e outra escolhe a versão.
+O modelo já vem com duas marcas, Python Floripa e Python Brasil, cada uma com versão clara e escura. Uma linha no topo do `slides.md` escolhe a marca. Durante a palestra, o botão de lua troca a versão.
 
-![Seis slides de exemplo com a marca Python Floripa, na versão clara: capa, seção, código, fluxograma, gráfico de barras e encerramento com QR code](docs/overview.png)
+### Python Floripa, versão clara
 
-Os mesmos slides, na versão escura e com a marca Python Brasil:
+![Seis slides de exemplo com a marca Python Floripa, na versão clara, em branco, azul-marinho e laranja: capa, seção, código, fluxograma, gráfico de barras e encerramento com QR code](docs/overview.png)
 
-![Os seis slides na versão escura da Python Floripa, em azul-marinho e laranja](docs/overview-escura.png)
+### Python Floripa, versão escura
 
-![Capa, slide de código e fluxograma com a marca Python Brasil, em preto e verde limão](docs/python-brasil.png)
+![Os mesmos seis slides na versão escura, com fundo azul-marinho e títulos em laranja. O código continua num cartão branco](docs/overview-escura.png)
+
+### Python Brasil, versão clara
+
+![Capa, slide de código e fluxograma com a marca Python Brasil, na versão clara, em branco, preto e verde limão](docs/python-brasil.png)
+
+### Python Brasil, versão escura
+
+![Os mesmos três slides na versão escura da Python Brasil, com fundo preto, texto off-white e destaques em verde limão](docs/python-brasil-escura.png)
 
 Veja os slides de exemplo [no navegador](https://rodbv.github.io/python-slides-template/), ou em PDF nas versões [clara](https://rodbv.github.io/python-slides-template/slides.pdf) e [escura](https://rodbv.github.io/python-slides-template/slides-escura.pdf).
 

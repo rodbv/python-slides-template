@@ -7,11 +7,12 @@
     uv run scripts/previews.py
 
 Exporta os slides em PNG com o Slidev (npx slidev export), nas variantes
-Python Floripa clara, Python Floripa escura e Python Brasil clara, e monta:
+Python Floripa clara e escura e Python Brasil clara e escura, e monta:
 
     docs/overview.png          seis slides da versão clara
     docs/overview-escura.png   os mesmos seis, na versão escura
     docs/python-brasil.png     três slides com a marca Python Brasil
+    docs/python-brasil-escura.png  os mesmos três, na versão escura
     docs/codigo.png            o slide de código, na versão escura
     docs/cores/<HEX>.png       uma amostra para cada cor de brands/*/brand.css
 
@@ -98,6 +99,7 @@ def main() -> None:
         "clara": variante("clara", {"brand": "python-floripa", "colorSchema": "light"}),
         "escura": variante("escura", {"brand": "python-floripa", "colorSchema": "dark"}),
         "python-brasil": variante("python-brasil", {"brand": "python-brasil", "colorSchema": "light"}),
+        "python-brasil-escura": variante("python-brasil-escura", {"brand": "python-brasil", "colorSchema": "dark"}),
     }
     try:
         with tempfile.TemporaryDirectory() as temporaria:
@@ -105,6 +107,7 @@ def main() -> None:
             grade([slides["clara"][n] for n in SLIDES_DA_VISAO_GERAL], 3, DOCS / "overview.png")
             grade([slides["escura"][n] for n in SLIDES_DA_VISAO_GERAL], 3, DOCS / "overview-escura.png")
             grade([slides["python-brasil"][n] for n in SLIDES_DA_PYTHON_BRASIL], 3, DOCS / "python-brasil.png")
+            grade([slides["python-brasil-escura"][n] for n in SLIDES_DA_PYTHON_BRASIL], 3, DOCS / "python-brasil-escura.png")
             with Image.open(slides["escura"][SLIDE_DE_CODIGO]) as codigo:
                 codigo.convert("RGB").resize((1280, round(codigo.height * 1280 / codigo.width)), Image.LANCZOS).save(
                     DOCS / "codigo.png", optimize=True
