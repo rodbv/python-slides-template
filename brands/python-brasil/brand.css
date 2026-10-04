@@ -1,0 +1,31 @@
+/* Python Brasil: preto e verde limão, títulos em Cascadia Mono. */
+html[data-brand='python-brasil'] {
+  --bg: #ffffff;
+  --text: #0f0f0f;
+  --muted: #4a4a4a;
+  --accent: #0f0f0f;
+  --fill: #b7ff06;
+  --on-fill: #0f0f0f;
+  --fill-edge: #0f0f0f;
+  --card: #e8f4ba;
+  --card-line: #c9d9a0;
+  --link: #bf2eb2;
+  --font-sans: 'Roboto', sans-serif;
+  --font-head: 'Cascadia Mono', monospace;
+  --head-weight: 700;
+  --head-transform: uppercase;
+  --logo: url('./logo-claro.png');
+  --footer: 'Python Brasil';
+}
+
+html.dark[data-brand='python-brasil'] {
+  --bg: #0f0f0f;
+  --text: #e8f4ba;
+  --muted: #ababab;
+  --accent: #b7ff06;
+  --fill-edge: #b7ff06;
+  --card: #242424;
+  --card-line: #3a3a3a;
+  --link: #d26cc9;
+  --logo: url('./logo-escuro.png');
+}
